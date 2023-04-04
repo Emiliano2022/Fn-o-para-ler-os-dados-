@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Cachorro {
+    char nome[20];
+    char raca[50];
+    int idade;
+} Cachorro;
+
+Cachorro ler_cachorro() {
+    Cachorro novo_cachorro;
+    printf("Digite o nome do cachorro: ");
+    scanf("%s", novo_cachorro.nome);
+    printf("Digite a raca do cachorro: ");
+    scanf("%s", novo_cachorro.raca);
+    printf("Digite a idade do cachorro: ");
+    scanf("%d", &novo_cachorro.idade);
+    return novo_cachorro;
+}
+
+int main() {
+    Cachorro cachorro1;
+    cachorro1 = ler_cachorro();
+    printf("Nome do cachorro: %s\n", cachorro1.nome);
+    printf("Raca do cachorro: %s\n", cachorro1.raca);
+    printf("Idade do cachorro: %d\n", cachorro1.idade);
+    return 0;
+}
